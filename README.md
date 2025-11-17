@@ -97,7 +97,7 @@ Toda requisição e resposta segue uma estrutura semelhante a:
     "operacao": "soma",
     "parametros": { "numeros": [1, 2, 3] },
     "timestamp": "2025-11-16T20:30:00"
-}
+}´´´
 
 JSON permite aninhamento por meio de listas e objetos, o que facilita o envio e a organização de informações complexas, além de ser autodescritivo e amplamente compatível com praticamente qualquer linguagem. No protocolo utilizado, o servidor envia as respostas também em JSON, sempre finalizadas por um caractere de nova linha (\n) para facilitar a delimitação e leitura; já o cliente, ao receber esses dados, realiza a validação da estrutura antes de processá-la, garantindo que o conteúdo seja bem formado. Como resultado, este protocolo alcança um bom equilíbrio entre legibilidade, padronização e simplicidade de implementação, sendo também menos suscetível a ambiguidades quando comparado ao protocolo baseado em Strings.
 
