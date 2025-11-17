@@ -2,6 +2,9 @@
 
 Para a execução correta do código, execute o arquivo denominado main.py e siga as instruções dadas por ele.
 
+**Aluno:** Antonio Matheus Monteiro da Silva
+**Matrícula:** 554229
+
 # Introdução
 
 Este relatório apresenta o desenvolvimento de um sistema cliente capaz de se comunicar com um servidor remoto utilizando três protocolos distintos: **Strings**, **JSON** e **Protobuf**. O objetivo principal foi projetar uma solução robusta que suportasse comunicação síncrona baseada em sockets TCP, garantindo interoperabilidade, avaliação de desempenho entre formatos e tolerância a falhas de rede.
