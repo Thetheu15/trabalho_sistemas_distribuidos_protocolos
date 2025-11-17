@@ -5,6 +5,10 @@ from trabalho_distribuidos_protobuff import servidor_protobuf
 
 if __name__=="__main__":
 
+    open('respostas_trab_distribuidos_json.txt', 'w').close()
+    open('respostas_trab_distribuidos_protbuf.txt', 'w').close()
+    open('respostas_trab_distribuidos_string.txt', 'w').close()
+
     while True:
         print('''\nDigite o numero da operações deseja executar:
                 1. Estatisticas
@@ -74,5 +78,6 @@ if __name__=="__main__":
             case 7:
 
                 print('Parando a execução do código!')
+
 
                 break
