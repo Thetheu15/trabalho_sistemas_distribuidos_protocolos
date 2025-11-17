@@ -68,6 +68,66 @@ Todas as funções de IO de rede possuem:
 
 ## Estrutura de mensagens por protocolo
 
-### Protocolo Strings
-Mensagens trafegam como texto puro, estruturado manualmente:
+## Protocolo Strings
+
+No protocolo **Strings**, todas as mensagens trafegam como texto puro, estruturado manualmente usando separadores.  
+O formato segue a convenção:
+
+AUTH/OP/INFO/LOGOUT|param1|param2|...|FIM
+
+O protocolo baseado em Strings organiza todas as mensagens como sequências de texto simples, nas quais:
+
+- O primeiro campo indica o **tipo de resposta** (normalmente `OK` ou `ERR`).
+- Os campos seguintes seguem o formato **chave=valor**, separados por barras verticais (`|`).
+- A mensagem é sempre finalizada com o marcador `|FIM`, que o cliente utiliza como delimitador para encerrar a leitura do socket.
+
+Esse modelo exige que o receptor faça o *parsing* manual, dividindo o texto com `split("|")` e validando a presença dos campos obrigatórios — o que torna o protocolo mais suscetível a erros estruturais caso algum caractere inesperado apareça.
+
+Por outro lado, trata-se do protocolo mais simples e com maior **legibilidade imediata para humanos**, além de não requerer bibliotecas externas, sendo ideal para depuração rápida e interoperabilidade mínima.
+
+## Protocolo JSON
+
+No protocolo **JSON**, as mensagens são estruturadas usando objetos JSON convertidos para texto.  
+Toda requisição e resposta segue uma estrutura semelhante a:
+
+```json
+{
+    "tipo": "operacao",
+    "token": "abc123",
+    "operacao": "soma",
+    "parametros": { "numeros": [1, 2, 3] },
+    "timestamp": "2025-11-16T20:30:00"
+}
+
+JSON permite aninhamento por meio de listas e objetos, o que facilita o envio e a organização de informações complexas, além de ser autodescritivo e amplamente compatível com praticamente qualquer linguagem. No protocolo utilizado, o servidor envia as respostas também em JSON, sempre finalizadas por um caractere de nova linha (\n) para facilitar a delimitação e leitura; já o cliente, ao receber esses dados, realiza a validação da estrutura antes de processá-la, garantindo que o conteúdo seja bem formado. Como resultado, este protocolo alcança um bom equilíbrio entre legibilidade, padronização e simplicidade de implementação, sendo também menos suscetível a ambiguidades quando comparado ao protocolo baseado em Strings.
+
+## Protocolo Protobuf
+
+O **Protobuf** utiliza mensagens binárias serializadas, compactas e rigidamente definidas através de um arquivo `.proto`. A estrutura segue:
+
+- Cada mensagem é enviada com um **header de 4 bytes (big-endian)** indicando o tamanho do payload.
+- O **payload** é um bloco binário gerado pela serialização de uma mensagem `Requisicao` ou `Resposta`.
+
+### Exemplo
+
+[00 00 01 2E][payload binário...]
+
+
+O formato de mensagens no protocolo Protobuf é altamente estruturado e rigidamente definido no arquivo `.proto`, onde cada tipo, campo e valor possível é especificado antecipadamente, eliminando ambiguidade e garantindo validação automática.
+
+As respostas do servidor utilizam:
+
+- **maps** (`map<string, string>`)
+- Estruturas **oneof** (como `ok` ou `erro`)
+
+Esses elementos permitem que o cliente interprete corretamente o tipo e conteúdo da mensagem recebida.
+
+Além disso, o Protobuf se destaca pela **eficiência**:
+
+- Gera payloads muito menores  
+- Possui parsing significativamente mais rápido que JSON ou Strings  
+- É ideal para comunicação de alta performance
+
+A principal desvantagem está na **baixa legibilidade humana**: as mensagens não podem ser facilmente compreendidas sem ferramentas ou bibliotecas específicas, dificultando a depuração ou inspeção manual durante o desenvolvimento.
+
 
