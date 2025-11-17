@@ -90,14 +90,13 @@ Por outro lado, trata-se do protocolo mais simples e com maior **legibilidade im
 No protocolo **JSON**, as mensagens são estruturadas usando objetos JSON convertidos para texto.  
 Toda requisição e resposta segue uma estrutura semelhante a:
 
-```json
 {
     "tipo": "operacao",
     "token": "abc123",
     "operacao": "soma",
     "parametros": { "numeros": [1, 2, 3] },
     "timestamp": "2025-11-16T20:30:00"
-}´´´
+}
 
 JSON permite aninhamento por meio de listas e objetos, o que facilita o envio e a organização de informações complexas, além de ser autodescritivo e amplamente compatível com praticamente qualquer linguagem. No protocolo utilizado, o servidor envia as respostas também em JSON, sempre finalizadas por um caractere de nova linha (\n) para facilitar a delimitação e leitura; já o cliente, ao receber esses dados, realiza a validação da estrutura antes de processá-la, garantindo que o conteúdo seja bem formado. Como resultado, este protocolo alcança um bom equilíbrio entre legibilidade, padronização e simplicidade de implementação, sendo também menos suscetível a ambiguidades quando comparado ao protocolo baseado em Strings.
 
@@ -130,4 +129,12 @@ Além disso, o Protobuf se destaca pela **eficiência**:
 
 A principal desvantagem está na **baixa legibilidade humana**: as mensagens não podem ser facilmente compreendidas sem ferramentas ou bibliotecas específicas, dificultando a depuração ou inspeção manual durante o desenvolvimento.
 
+## Conclusão
 
+Cada protocolo apresenta vantagens e desvantagens dependendo do contexto de uso.
+
+- **Strings** é simples e legível, ideal para depuração rápida e interoperabilidade mínima.
+- **JSON** equilibra legibilidade, organização de dados complexos e compatibilidade entre linguagens.
+- **Protobuf** oferece alta eficiência e performance, mas exige ferramentas para interpretação das mensagens, tornando-o mais adequado para aplicações de alto desempenho ou ambientes com grande volume de dados.
+
+A escolha do protocolo deve considerar fatores como **legibilidade**, **tamanho das mensagens**, **velocidade de processamento** e **complexidade da aplicação**.
