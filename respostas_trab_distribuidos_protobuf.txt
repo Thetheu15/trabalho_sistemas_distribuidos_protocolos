@@ -1,0 +1,977 @@
+autenticacao=ok {
+  comando: "AUTH"
+  dados {
+    key: "matricula"
+    value: "554229"
+  }
+  dados {
+    key: "nome"
+    value: "ANTONIO MATHEUS MONTEIRO DA SILVA"
+  }
+  dados {
+    key: "timeout_segundos"
+    value: "3600"
+  }
+  dados {
+    key: "token"
+    value: "554229:165.1.220.201:1763326309:fc7dd16cf94c703ef0f4e1ffbf4464a90f08c9dbe8d42e3d6e80d8b31f6a75d9"
+  }
+  timestamp: "2025-11-16T20:51:49.467330"
+}
+
+soma=ok {
+  comando: "OP"
+  dados {
+    key: "maximo"
+    value: "2.0"
+  }
+  dados {
+    key: "media"
+    value: "1.5"
+  }
+  dados {
+    key: "minimo"
+    value: "1.0"
+  }
+  dados {
+    key: "numeros_originais"
+    value: "1.0,2.0"
+  }
+  dados {
+    key: "operacao"
+    value: "soma"
+  }
+  dados {
+    key: "quantidade"
+    value: "2"
+  }
+  dados {
+    key: "soma"
+    value: "3.0"
+  }
+  dados {
+    key: "timestamp_calculo"
+    value: "2025-11-16T20:51:49.653099"
+  }
+  timestamp: "2025-11-16T20:51:49.653074"
+}
+
+logout=ok {
+  comando: "LOGOUT"
+  dados {
+    key: "msg"
+    value: "Logout realizado com sucesso"
+  }
+  timestamp: "2025-11-16T20:51:49.827457"
+}
+
+autenticacao=ok {
+  comando: "AUTH"
+  dados {
+    key: "matricula"
+    value: "554229"
+  }
+  dados {
+    key: "nome"
+    value: "ANTONIO MATHEUS MONTEIRO DA SILVA"
+  }
+  dados {
+    key: "timeout_segundos"
+    value: "3600"
+  }
+  dados {
+    key: "token"
+    value: "554229:165.1.220.201:1763326392:8ef0a28aa99766c2224bf0ed30c0f071c409c215233f8031f1093401df62bc27"
+  }
+  timestamp: "2025-11-16T20:53:12.896805"
+}
+
+echo=ok {
+  comando: "OP"
+  dados {
+    key: "hash_md5"
+    value: "c1840a018d09e9b2ca225d0d661138dc"
+  }
+  dados {
+    key: "mensagem_eco"
+    value: "ECO: ol\303\241 mundo!"
+  }
+  dados {
+    key: "mensagem_original"
+    value: "ol\303\241 mundo!"
+  }
+  dados {
+    key: "operacao"
+    value: "echo"
+  }
+  dados {
+    key: "tamanho_mensagem"
+    value: "10"
+  }
+  dados {
+    key: "timestamp_servidor"
+    value: "2025-11-16T20:53:13.096862"
+  }
+  timestamp: "2025-11-16T20:53:13.096832"
+}
+
+logout=ok {
+  comando: "LOGOUT"
+  dados {
+    key: "msg"
+    value: "Logout realizado com sucesso"
+  }
+  timestamp: "2025-11-16T20:53:13.271149"
+}
+
+autenticacao=ok {
+  comando: "AUTH"
+  dados {
+    key: "matricula"
+    value: "554229"
+  }
+  dados {
+    key: "nome"
+    value: "ANTONIO MATHEUS MONTEIRO DA SILVA"
+  }
+  dados {
+    key: "timeout_segundos"
+    value: "3600"
+  }
+  dados {
+    key: "token"
+    value: "554229:165.1.220.201:1763326459:3610fdae798a6bc264b701e2b2abaac3cddee59d81c435dc99b8b001e7fd3b82"
+  }
+  timestamp: "2025-11-16T20:54:19.902682"
+}
+
+status=ok {
+  comando: "OP"
+  dados {
+    key: "estatisticas_banco"
+    value: "{}"
+  }
+  dados {
+    key: "metricas"
+    value: "{\'cpu_simulado\': 33.54, \'memoria_simulada\': 30.57, \'latencia_simulada\': 7.7}"
+  }
+  dados {
+    key: "operacao"
+    value: "status"
+  }
+  dados {
+    key: "operacoes_processadas"
+    value: "107"
+  }
+  dados {
+    key: "sessoes_ativas"
+    value: "3"
+  }
+  dados {
+    key: "sessoes_detalhes"
+    value: "{}"
+  }
+  dados {
+    key: "status"
+    value: "ATIVO"
+  }
+  dados {
+    key: "tempo_ativo"
+    value: "1763326460.0894477"
+  }
+  dados {
+    key: "versao"
+    value: "1.0.0"
+  }
+  timestamp: "2025-11-16T20:54:20.095958"
+}
+
+logout=ok {
+  comando: "LOGOUT"
+  dados {
+    key: "msg"
+    value: "Logout realizado com sucesso"
+  }
+  timestamp: "2025-11-16T20:54:20.276709"
+}
+
+autenticacao=ok {
+  comando: "AUTH"
+  dados {
+    key: "matricula"
+    value: "554229"
+  }
+  dados {
+    key: "nome"
+    value: "ANTONIO MATHEUS MONTEIRO DA SILVA"
+  }
+  dados {
+    key: "timeout_segundos"
+    value: "3600"
+  }
+  dados {
+    key: "token"
+    value: "554229:165.1.220.201:1763326574:7ee0b0f81422bbfe8f5374d8e4343f51579b5715c670e11a1087303ab4fa20e8"
+  }
+  timestamp: "2025-11-16T20:56:14.766449"
+}
+
+soma=ok {
+  comando: "OP"
+  dados {
+    key: "maximo"
+    value: "2.0"
+  }
+  dados {
+    key: "media"
+    value: "2.0"
+  }
+  dados {
+    key: "minimo"
+    value: "2.0"
+  }
+  dados {
+    key: "numeros_originais"
+    value: "2.0,2.0"
+  }
+  dados {
+    key: "operacao"
+    value: "soma"
+  }
+  dados {
+    key: "quantidade"
+    value: "2"
+  }
+  dados {
+    key: "soma"
+    value: "4.0"
+  }
+  dados {
+    key: "timestamp_calculo"
+    value: "2025-11-16T20:56:14.960920"
+  }
+  timestamp: "2025-11-16T20:56:14.960892"
+}
+
+logout=ok {
+  comando: "LOGOUT"
+  dados {
+    key: "msg"
+    value: "Logout realizado com sucesso"
+  }
+  timestamp: "2025-11-16T20:56:15.140356"
+}
+
+autenticacao=ok {
+  comando: "AUTH"
+  dados {
+    key: "matricula"
+    value: "554229"
+  }
+  dados {
+    key: "nome"
+    value: "ANTONIO MATHEUS MONTEIRO DA SILVA"
+  }
+  dados {
+    key: "timeout_segundos"
+    value: "3600"
+  }
+  dados {
+    key: "token"
+    value: "554229:165.1.220.201:1763326691:13d8924e68fa0fb0d4a896be920ee40b9e855383c8aa6f3d8b995326061084cb"
+  }
+  timestamp: "2025-11-16T20:58:11.580216"
+}
+
+status=ok {
+  comando: "OP"
+  dados {
+    key: "estatisticas_banco"
+    value: "{}"
+  }
+  dados {
+    key: "metricas"
+    value: "{\'cpu_simulado\': 34.44, \'memoria_simulada\': 55.51, \'latencia_simulada\': 2.52}"
+  }
+  dados {
+    key: "operacao"
+    value: "status"
+  }
+  dados {
+    key: "operacoes_processadas"
+    value: "109"
+  }
+  dados {
+    key: "sessoes_ativas"
+    value: "3"
+  }
+  dados {
+    key: "sessoes_detalhes"
+    value: "{}"
+  }
+  dados {
+    key: "status"
+    value: "ATIVO"
+  }
+  dados {
+    key: "tempo_ativo"
+    value: "1763326691.7782123"
+  }
+  dados {
+    key: "versao"
+    value: "1.0.0"
+  }
+  timestamp: "2025-11-16T20:58:11.784429"
+}
+
+logout=ok {
+  comando: "LOGOUT"
+  dados {
+    key: "msg"
+    value: "Logout realizado com sucesso"
+  }
+  timestamp: "2025-11-16T20:58:11.959725"
+}
+
+autenticacao=ok {
+  comando: "AUTH"
+  dados {
+    key: "matricula"
+    value: "554229"
+  }
+  dados {
+    key: "nome"
+    value: "ANTONIO MATHEUS MONTEIRO DA SILVA"
+  }
+  dados {
+    key: "timeout_segundos"
+    value: "3600"
+  }
+  dados {
+    key: "token"
+    value: "554229:165.1.220.201:1763326793:44e258c2451f5462450edf42de0b3f3daa2cba48ed1c90a50d244c220e8dd712"
+  }
+  timestamp: "2025-11-16T20:59:53.054807"
+}
+
+info=ok {
+  comando: "INFO"
+  dados {
+    key: "formato"
+    value: "[tamanho:4bytes][dados_protobuf:N bytes]"
+  }
+  dados {
+    key: "host"
+    value: "0.0.0.0"
+  }
+  dados {
+    key: "nome"
+    value: "Servidor de Valida\303\247\303\243o SD - Protobuf"
+  }
+  dados {
+    key: "port"
+    value: "8082"
+  }
+  dados {
+    key: "protocolo"
+    value: "protobuf"
+  }
+  dados {
+    key: "versao"
+    value: "1.0.0"
+  }
+  timestamp: "2025-11-16T20:59:53.246500"
+}
+
+logout=ok {
+  comando: "LOGOUT"
+  dados {
+    key: "msg"
+    value: "Logout realizado com sucesso"
+  }
+  timestamp: "2025-11-16T20:59:53.427859"
+}
+
+autenticacao=ok {
+  comando: "AUTH"
+  dados {
+    key: "matricula"
+    value: "554229"
+  }
+  dados {
+    key: "nome"
+    value: "ANTONIO MATHEUS MONTEIRO DA SILVA"
+  }
+  dados {
+    key: "timeout_segundos"
+    value: "3600"
+  }
+  dados {
+    key: "token"
+    value: "554229:45.167.58.249:1763330658:b833dc6d71915c291800f0589ed037e9b5f5e44661bc5ae1b722b0f4c13426d0"
+  }
+  timestamp: "2025-11-16T22:04:18.045283"
+}
+
+status=ok {
+  comando: "OP"
+  dados {
+    key: "estatisticas_banco"
+    value: "{}"
+  }
+  dados {
+    key: "metricas"
+    value: "{\'cpu_simulado\': 28.39, \'memoria_simulada\': 49.56, \'latencia_simulada\': 3.19}"
+  }
+  dados {
+    key: "operacao"
+    value: "status"
+  }
+  dados {
+    key: "operacoes_processadas"
+    value: "122"
+  }
+  dados {
+    key: "sessoes_ativas"
+    value: "3"
+  }
+  dados {
+    key: "sessoes_detalhes"
+    value: "{}"
+  }
+  dados {
+    key: "status"
+    value: "ATIVO"
+  }
+  dados {
+    key: "tempo_ativo"
+    value: "1763330658.604843"
+  }
+  dados {
+    key: "versao"
+    value: "1.0.0"
+  }
+  timestamp: "2025-11-16T22:04:18.610899"
+}
+
+logout=ok {
+  comando: "LOGOUT"
+  dados {
+    key: "msg"
+    value: "Logout realizado com sucesso"
+  }
+  timestamp: "2025-11-16T22:04:18.809345"
+}
+
+autenticacao=ok {
+  comando: "AUTH"
+  dados {
+    key: "matricula"
+    value: "554229"
+  }
+  dados {
+    key: "nome"
+    value: "ANTONIO MATHEUS MONTEIRO DA SILVA"
+  }
+  dados {
+    key: "timeout_segundos"
+    value: "3600"
+  }
+  dados {
+    key: "token"
+    value: "554229:45.167.58.249:1763332170:61bd135a1bc869b19b2243ccc718a4c0ea63d658fae0a6da8f55cb1215132685"
+  }
+  timestamp: "2025-11-16T22:29:30.751710"
+}
+
+historico=ok {
+  comando: "OP"
+  dados {
+    key: "aluno_id"
+    value: "554229"
+  }
+  dados {
+    key: "estatisticas"
+    value: "{\'total_operacoes\': 6, \'operacoes_sucesso\': 6, \'operacoes_erro\': 0, \'taxa_sucesso\': 100.0}"
+  }
+  dados {
+    key: "historico"
+    value: "[{\'operacao\': \'autentic\', \'sucesso\': True, \'timestamp\': \'2025-11-16T22:29\'}, {\'operacao\': \'status\', \'sucesso\': True, \'timestamp\': \'2025-11-16T22:04\'}, {\'operacao\': \'autentic\', \'sucesso\': True, \'timestamp\': \'2025-11-16T22:04\'}, {\'operacao\': \'autentic\', \'sucesso\': True, \'timestamp\': \'2025-11-16T20:59\'}, {\'operacao\': \'status\', \'sucesso\': True, \'timestamp\': \'2025-11-16T20:58\'}, {\'operacao\': \'autentic\', \'sucesso\': True, \'timestamp\': \'2025-11-16T20:58\'}]"
+  }
+  dados {
+    key: "limite_solicitado"
+    value: "6"
+  }
+  dados {
+    key: "timestamp_consulta"
+    value: "2025-11-16T22:29:30.852965"
+  }
+  dados {
+    key: "total_encontrado"
+    value: "6"
+  }
+  timestamp: "2025-11-16T22:29:30.858994"
+}
+
+logout=ok {
+  comando: "LOGOUT"
+  dados {
+    key: "msg"
+    value: "Logout realizado com sucesso"
+  }
+  timestamp: "2025-11-16T22:29:30.950285"
+}
+
+autenticacao=ok {
+  comando: "AUTH"
+  dados {
+    key: "matricula"
+    value: "554229"
+  }
+  dados {
+    key: "nome"
+    value: "ANTONIO MATHEUS MONTEIRO DA SILVA"
+  }
+  dados {
+    key: "timeout_segundos"
+    value: "3600"
+  }
+  dados {
+    key: "token"
+    value: "554229:45.167.58.249:1763337322:70e2db3ba02d6e725e9e6063786de60aa81c67d8d3593ef6658003fa8f4c5133"
+  }
+  timestamp: "2025-11-16T23:55:22.271454"
+}
+
+info=ok {
+  comando: "INFO"
+  dados {
+    key: "formato"
+    value: "[tamanho:4bytes][dados_protobuf:N bytes]"
+  }
+  dados {
+    key: "host"
+    value: "0.0.0.0"
+  }
+  dados {
+    key: "nome"
+    value: "Servidor de Valida\303\247\303\243o SD - Protobuf"
+  }
+  dados {
+    key: "port"
+    value: "8082"
+  }
+  dados {
+    key: "protocolo"
+    value: "protobuf"
+  }
+  dados {
+    key: "versao"
+    value: "1.0.0"
+  }
+  timestamp: "2025-11-16T23:55:22.384266"
+}
+
+logout=ok {
+  comando: "LOGOUT"
+  dados {
+    key: "msg"
+    value: "Logout realizado com sucesso"
+  }
+  timestamp: "2025-11-16T23:55:22.477248"
+}
+
+autenticacao=ok {
+  comando: "AUTH"
+  dados {
+    key: "matricula"
+    value: "554229"
+  }
+  dados {
+    key: "nome"
+    value: "ANTONIO MATHEUS MONTEIRO DA SILVA"
+  }
+  dados {
+    key: "timeout_segundos"
+    value: "3600"
+  }
+  dados {
+    key: "token"
+    value: "554229:45.167.58.249:1763338242:5e90da90482b2a35d159e51c511062c963789dd56ba5ad533bb012b684b7e1b1"
+  }
+  timestamp: "2025-11-17T00:10:42.716234"
+}
+
+soma=ok {
+  comando: "OP"
+  dados {
+    key: "maximo"
+    value: "5.0"
+  }
+  dados {
+    key: "media"
+    value: "3.5"
+  }
+  dados {
+    key: "minimo"
+    value: "2.0"
+  }
+  dados {
+    key: "numeros_originais"
+    value: "2.0,3.0,4.0,5.0"
+  }
+  dados {
+    key: "operacao"
+    value: "soma"
+  }
+  dados {
+    key: "quantidade"
+    value: "4"
+  }
+  dados {
+    key: "soma"
+    value: "14.0"
+  }
+  dados {
+    key: "timestamp_calculo"
+    value: "2025-11-17T00:10:42.852860"
+  }
+  timestamp: "2025-11-17T00:10:42.852834"
+}
+
+logout=ok {
+  comando: "LOGOUT"
+  dados {
+    key: "msg"
+    value: "Logout realizado com sucesso"
+  }
+  timestamp: "2025-11-17T00:10:42.951217"
+}
+
+autenticacao=ok {
+  comando: "AUTH"
+  dados {
+    key: "matricula"
+    value: "554229"
+  }
+  dados {
+    key: "nome"
+    value: "ANTONIO MATHEUS MONTEIRO DA SILVA"
+  }
+  dados {
+    key: "timeout_segundos"
+    value: "3600"
+  }
+  dados {
+    key: "token"
+    value: "554229:45.167.58.249:1763338253:9b762c08dfee1598223f28822443a0e26816779026396296488a487c597506b1"
+  }
+  timestamp: "2025-11-17T00:10:53.461320"
+}
+
+echo=ok {
+  comando: "OP"
+  dados {
+    key: "hash_md5"
+    value: "8d595f21e04dffc4f863bb7d37940b78"
+  }
+  dados {
+    key: "mensagem_eco"
+    value: "ECO: Ol\303\241 mundo!"
+  }
+  dados {
+    key: "mensagem_original"
+    value: "Ol\303\241 mundo!"
+  }
+  dados {
+    key: "operacao"
+    value: "echo"
+  }
+  dados {
+    key: "tamanho_mensagem"
+    value: "10"
+  }
+  dados {
+    key: "timestamp_servidor"
+    value: "2025-11-17T00:10:53.590946"
+  }
+  timestamp: "2025-11-17T00:10:53.590932"
+}
+
+logout=ok {
+  comando: "LOGOUT"
+  dados {
+    key: "msg"
+    value: "Logout realizado com sucesso"
+  }
+  timestamp: "2025-11-17T00:10:53.681430"
+}
+
+autenticacao=ok {
+  comando: "AUTH"
+  dados {
+    key: "matricula"
+    value: "554229"
+  }
+  dados {
+    key: "nome"
+    value: "ANTONIO MATHEUS MONTEIRO DA SILVA"
+  }
+  dados {
+    key: "timeout_segundos"
+    value: "3600"
+  }
+  dados {
+    key: "token"
+    value: "554229:45.167.58.249:1763338260:dc090b123b70d8cf4841d996276c148f0ecbf3e3a1c5a977dcea6e554d4fca3f"
+  }
+  timestamp: "2025-11-17T00:11:00.408787"
+}
+
+timestamp=ok {
+  comando: "OP"
+  dados {
+    key: "ano"
+    value: "2025"
+  }
+  dados {
+    key: "dia"
+    value: "17"
+  }
+  dados {
+    key: "hora"
+    value: "0"
+  }
+  dados {
+    key: "mes"
+    value: "11"
+  }
+  dados {
+    key: "microsegundo"
+    value: "510404"
+  }
+  dados {
+    key: "minuto"
+    value: "11"
+  }
+  dados {
+    key: "operacao"
+    value: "timestamp"
+  }
+  dados {
+    key: "segundo"
+    value: "0"
+  }
+  dados {
+    key: "timestamp_formatado"
+    value: "17/11/2025 00:11:00"
+  }
+  dados {
+    key: "timestamp_iso"
+    value: "2025-11-17T00:11:00.510404"
+  }
+  dados {
+    key: "timestamp_unix"
+    value: "1763338260.510404"
+  }
+  timestamp: "2025-11-17T00:11:00.510404"
+}
+
+logout=ok {
+  comando: "LOGOUT"
+  dados {
+    key: "msg"
+    value: "Logout realizado com sucesso"
+  }
+  timestamp: "2025-11-17T00:11:00.600876"
+}
+
+autenticacao=ok {
+  comando: "AUTH"
+  dados {
+    key: "matricula"
+    value: "554229"
+  }
+  dados {
+    key: "nome"
+    value: "ANTONIO MATHEUS MONTEIRO DA SILVA"
+  }
+  dados {
+    key: "timeout_segundos"
+    value: "3600"
+  }
+  dados {
+    key: "token"
+    value: "554229:45.167.58.249:1763338264:9fff2473797e05ae8ada611e0c444b70c1880f84d2dd2ed22fc575d26a4929e3"
+  }
+  timestamp: "2025-11-17T00:11:04.662675"
+}
+
+status=ok {
+  comando: "OP"
+  dados {
+    key: "estatisticas_banco"
+    value: "{}"
+  }
+  dados {
+    key: "metricas"
+    value: "{\'cpu_simulado\': 48.47, \'memoria_simulada\': 36.84, \'latencia_simulada\': 6.89}"
+  }
+  dados {
+    key: "operacao"
+    value: "status"
+  }
+  dados {
+    key: "operacoes_processadas"
+    value: "241"
+  }
+  dados {
+    key: "sessoes_ativas"
+    value: "3"
+  }
+  dados {
+    key: "sessoes_detalhes"
+    value: "{}"
+  }
+  dados {
+    key: "status"
+    value: "ATIVO"
+  }
+  dados {
+    key: "tempo_ativo"
+    value: "1763338264.7602165"
+  }
+  dados {
+    key: "versao"
+    value: "1.0.0"
+  }
+  timestamp: "2025-11-17T00:11:04.766252"
+}
+
+logout=ok {
+  comando: "LOGOUT"
+  dados {
+    key: "msg"
+    value: "Logout realizado com sucesso"
+  }
+  timestamp: "2025-11-17T00:11:04.856728"
+}
+
+autenticacao=ok {
+  comando: "AUTH"
+  dados {
+    key: "matricula"
+    value: "554229"
+  }
+  dados {
+    key: "nome"
+    value: "ANTONIO MATHEUS MONTEIRO DA SILVA"
+  }
+  dados {
+    key: "timeout_segundos"
+    value: "3600"
+  }
+  dados {
+    key: "token"
+    value: "554229:45.167.58.249:1763338268:0c711bf9c14ca296c106b8a65a6f2311b7a0f3e730f9112e3cd90c1d8424f311"
+  }
+  timestamp: "2025-11-17T00:11:08.980297"
+}
+
+historico=ok {
+  comando: "OP"
+  dados {
+    key: "aluno_id"
+    value: "554229"
+  }
+  dados {
+    key: "estatisticas"
+    value: "{\'total_operacoes\': 6, \'operacoes_sucesso\': 6, \'operacoes_erro\': 0, \'taxa_sucesso\': 100.0}"
+  }
+  dados {
+    key: "historico"
+    value: "[{\'operacao\': \'autentic\', \'sucesso\': True, \'timestamp\': \'2025-11-17T00:11\'}, {\'operacao\': \'status\', \'sucesso\': True, \'timestamp\': \'2025-11-17T00:11\'}, {\'operacao\': \'autentic\', \'sucesso\': True, \'timestamp\': \'2025-11-17T00:11\'}, {\'operacao\': \'timestam\', \'sucesso\': True, \'timestamp\': \'2025-11-17T00:11\'}, {\'operacao\': \'autentic\', \'sucesso\': True, \'timestamp\': \'2025-11-17T00:11\'}, {\'operacao\': \'echo\', \'sucesso\': True, \'timestamp\': \'2025-11-17T00:10\'}]"
+  }
+  dados {
+    key: "limite_solicitado"
+    value: "6"
+  }
+  dados {
+    key: "timestamp_consulta"
+    value: "2025-11-17T00:11:09.075002"
+  }
+  dados {
+    key: "total_encontrado"
+    value: "6"
+  }
+  timestamp: "2025-11-17T00:11:09.081542"
+}
+
+logout=ok {
+  comando: "LOGOUT"
+  dados {
+    key: "msg"
+    value: "Logout realizado com sucesso"
+  }
+  timestamp: "2025-11-17T00:11:09.166326"
+}
+
+autenticacao=ok {
+  comando: "AUTH"
+  dados {
+    key: "matricula"
+    value: "554229"
+  }
+  dados {
+    key: "nome"
+    value: "ANTONIO MATHEUS MONTEIRO DA SILVA"
+  }
+  dados {
+    key: "timeout_segundos"
+    value: "3600"
+  }
+  dados {
+    key: "token"
+    value: "554229:45.167.58.249:1763338277:365a770f44c15616203ba3afde83c4748372c3a2065076d084506a32f36e86f3"
+  }
+  timestamp: "2025-11-17T00:11:17.791187"
+}
+
+info=ok {
+  comando: "INFO"
+  dados {
+    key: "formato"
+    value: "[tamanho:4bytes][dados_protobuf:N bytes]"
+  }
+  dados {
+    key: "host"
+    value: "0.0.0.0"
+  }
+  dados {
+    key: "nome"
+    value: "Servidor de Valida\303\247\303\243o SD - Protobuf"
+  }
+  dados {
+    key: "port"
+    value: "8082"
+  }
+  dados {
+    key: "protocolo"
+    value: "protobuf"
+  }
+  dados {
+    key: "versao"
+    value: "1.0.0"
+  }
+  timestamp: "2025-11-17T00:11:17.887246"
+}
+
+logout=ok {
+  comando: "LOGOUT"
+  dados {
+    key: "msg"
+    value: "Logout realizado com sucesso"
+  }
+  timestamp: "2025-11-17T00:11:17.978199"
+}
+
