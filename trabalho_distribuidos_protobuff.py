@@ -85,8 +85,16 @@ def format_protobuf_response(resp, elapsed=None):
 def enviar(sock, msg):
     """Envia mensagem protobuf com framing de 4 bytes."""
     try:
+
+        t_inicio = time.time()
         payload = msg.SerializeToString()
         header = struct.pack(">I", len(payload))
+        t_fim = time.time()
+        tempo_serializacao_ms = (t_fim - t_inicio) * 1000
+
+        print(f'Tamanho da mensagem PROTOBUF: {len(payload)} bytes')
+        print(f"Tempo de serialização PROTOBUF: {tempo_serializacao_ms:.2f} ms")
+
         sock.sendall(header + payload)
     except Exception as e:
         raise ErroRede(f"Erro ao enviar (protobuf): {e}")

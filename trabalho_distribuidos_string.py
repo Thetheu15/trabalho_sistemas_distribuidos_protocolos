@@ -48,7 +48,18 @@ def format_string_response(raw, elapsed=None):
 
 def enviar_mensagem(sock, mensagem):
     try:
-        sock.sendall((mensagem + "\n").encode('utf-8'))
+
+        t_inicio = time.time()
+        texto = mensagem + "\n"
+        texto = texto.encode('utf-8')
+        t_fim = time.time()
+        tempo_serializacao_ms = (t_fim - t_inicio) * 1000
+
+        print(f'Tamanho da mensagem STRING: {len(texto)} bytes')
+        print(f"Tempo de serialização STRING: {tempo_serializacao_ms:.2f} ms")
+
+        sock.sendall(texto)
+
     except Exception as e:
         raise ErroRede(f"Erro ao enviar (strings): {e}")
 
@@ -90,7 +101,7 @@ def autenticar(sock, timestamp):
 
 def soma(sock, token, numeros):
     nums = numeros if isinstance(numeros, str) else ",".join(str(n) for n in numeros)
-    msg = f'OP|{token}|operacao=soma|nums={nums}|FIM'
+    msg = f'OP|token={token}|operacao=soma|nums={nums}|FIM'
     enviar_mensagem(sock, msg)
     t0 = time.time()
     resp = receber_resposta(sock)
@@ -100,7 +111,7 @@ def soma(sock, token, numeros):
     print(format_string_response(resp, elapsed))
 
 def echo(sock, token, conteudo):
-    msg = f'OP|{token}|operacao=echo|mensagem={conteudo}|FIM'
+    msg = f'OP|token={token}|operacao=echo|mensagem={conteudo}|FIM'
     enviar_mensagem(sock, msg)
     t0 = time.time()
     resp = receber_resposta(sock)
@@ -110,7 +121,7 @@ def echo(sock, token, conteudo):
     print(format_string_response(resp, elapsed))
 
 def op_timestamp(sock, token):
-    msg = f'OP|{token}|operacao=timestamp|FIM'
+    msg = f'OP|token={token}|operacao=timestamp|FIM'
     enviar_mensagem(sock, msg)
     t0 = time.time()
     resp = receber_resposta(sock)
@@ -120,7 +131,7 @@ def op_timestamp(sock, token):
     print(format_string_response(resp, elapsed))
 
 def status(sock, token):
-    msg = f'OP|{token}|operacao=status|FIM'
+    msg = f'OP|token={token}|operacao=status|FIM'
     enviar_mensagem(sock, msg)
     t0 = time.time()
     resp = receber_resposta(sock)
@@ -130,7 +141,7 @@ def status(sock, token):
     print(format_string_response(resp, elapsed))
 
 def historico(sock, token):
-    msg = f'OP|{token}|operacao=historico|FIM'
+    msg = f'OP|token={token}|operacao=historico|FIM'
     enviar_mensagem(sock, msg)
     t0 = time.time()
     resp = receber_resposta(sock)
@@ -140,7 +151,7 @@ def historico(sock, token):
     print(format_string_response(resp, elapsed))
 
 def info(sock, token, tipo='basico'):
-    msg = f'INFO|{token}|tipo={tipo}|FIM'
+    msg = f'INFO|token={token}|tipo={tipo}|FIM'
     enviar_mensagem(sock, msg)
     t0 = time.time()
     resp = receber_resposta(sock)
@@ -150,7 +161,7 @@ def info(sock, token, tipo='basico'):
     print(format_string_response(resp, elapsed))
 
 def logout(sock, token):
-    msg = f'LOGOUT|{token}|FIM'
+    msg = f'LOGOUT|token={token}|FIM'
     enviar_mensagem(sock, msg)
     t0 = time.time()
     resp = receber_resposta(sock)

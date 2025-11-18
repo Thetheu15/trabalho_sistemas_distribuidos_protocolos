@@ -1,4 +1,4 @@
-# trabalho_sistemas_distribuidos_protocolos
+# Relatório do trabalho sistemas distribuidos protocolos de comunicação
 
 Para a execução correta do código, execute o arquivo denominado main.py e siga as instruções dadas por ele.
 
@@ -132,12 +132,74 @@ Além disso, o Protobuf se destaca pela **eficiência**:
 
 A principal desvantagem está na **baixa legibilidade humana**: as mensagens não podem ser facilmente compreendidas sem ferramentas ou bibliotecas específicas, dificultando a depuração ou inspeção manual durante o desenvolvimento.
 
+# Análise comparativa
+
+A partir da execução dos códigos, e a realização das consultas a cada método disponível no servidor, foi obtido as seguintes métricas:
+
+**1. Soma**
+
+| Protocolo | Tamanho (bytes) | Serialização (ms) | Tempo total (ms) |
+|-----------|------------------|-------------------|------------------|
+| Strings   | 114              | 0.00              | 101.92           |
+| JSON      | 171              | 0.05              | 95.41            |
+| Protobuf  | 100              | 0.08              | 95.48            |
+
+**2. Echo**
+
+| Protocolo | Tamanho (bytes) | Serialização (ms) | Tempo total (ms) |
+|-----------|------------------|-------------------|------------------|
+| Strings   | 114              | 0.00              | 95.24            |
+| JSON      | 171              | 0.04              | 95.50            |
+| Protobuf  | 100              | 0.02              | 96.02            |
+
+**3. Timestamp**
+
+| Protocolo | Tamanho (bytes) | Serialização (ms) | Tempo total (ms) |
+|-----------|------------------|-------------------|------------------|
+| Strings   | 114              | 0.00              | 96.62            |
+| JSON      | 171              | 0.05              | 95.40            |
+| Protobuf  | 100              | 0.04              | 95.01            |
+
+**4. Status**
+
+| Protocolo | Tamanho (bytes) | Serialização (ms) | Tempo total (ms) |
+|-----------|------------------|-------------------|------------------|
+| Strings   | 114              | 0.00              | 98.29            |
+| JSON      | 171              | 0.05              | 95.85            |
+| Protobuf  | 100              | 0.04              | 95.86            |
+
+**5. Histórico**
+
+| Protocolo | Tamanho (bytes) | Serialização (ms) | Tempo total (ms) |
+|-----------|------------------|-------------------|------------------|
+| Strings   | 114              | 0.00              | 127.06           |
+| JSON      | 171              | 0.05              | 99.63            |
+| Protobuf  | 100              | 0.07              | 98.31            |
+
+**6. Info**
+
+| Protocolo | Tamanho (bytes) | Serialização (ms) | Tempo total (ms) |
+|-----------|------------------|-------------------|------------------|
+| Strings   | 114              | 0.00              | 88.25            |
+| JSON      | 171              | 0.08              | 88.35            |
+| Protobuf  | 100              | 0.02              | 87.78            |
+
+**Comparativo geral**
+
+| Métrica              | Strings       | JSON          | Protobuf      |
+|---------------------|---------------|---------------|---------------|
+| Tamanho Médio       | ~114 bytes    | ~171 bytes    | **~100 bytes** |
+| Serialização Média  | ~0.00 ms      | ~0.05 ms      | ~0.05 ms      |
+| Tempo Médio         | ~101 ms       | ~95 ms        | **~95 ms**     |
+| Sucesso             | 100%          | 100%          | 100%          |
+| Legibilidade        | Alta          | Alta          | Baixa         |
+| Eficiência Geral    | Regular       | Boa           | **Excelente** |
+
+
+A partir dos resultados obtidos, observou-se que o protocolo Protobuf apresentou o melhor desempenho geral, com o menor tamanho médio de mensagem (~100 bytes) e tempo médio de resposta equivalente ao JSON (~95 ms). O JSON se destacou pelo equilíbrio entre legibilidade e eficiência, sendo altamente estruturado, facilmente interpretável e apresentando tempos similares ao Protobuf, apesar do tamanho médio de mensagem aproximadamente 70% maior (~171 bytes). O protocolo Strings, após a correção de formato do token, passou a executar todas as operações corretamente, porém apresentou mensagens maiores que o Protobuf (~114 bytes) e maior tempo médio de processamento (~101 ms), sobretudo na operação Histórico, que exigiu tratamento de dados mais volumosos. Além disso, por ser baseado em texto puro, o protocolo Strings demonstrou maior suscetibilidade a erros de formatação. Conclui-se que, para cenários de alta performance e otimização de rede, o Protobuf é a melhor opção, enquanto o JSON é mais indicado quando legibilidade e interoperabilidade são relevantes, e o Strings é adequado apenas para ambientes simples ou com baixo nível de estruturação dos dados.
+
 ## Conclusão
 
-Cada protocolo apresenta vantagens e desvantagens dependendo do contexto de uso.
+Com base nos resultados obtidos, conclui-se que a implementação dos três protocolos foi realizada com sucesso, permitindo uma avaliação comparativa precisa entre suas características de desempenho, eficiência e adequação a diferentes contextos de uso. O protocolo Protobuf demonstrou a melhor performance geral, apresentando as menores mensagens transmitidas, baixa latência e excelente estabilidade, sendo ideal para aplicações de alto desempenho e sistemas distribuídos com grande volume ou frequência de requisições. O protocolo JSON apresentou comportamento consistente e equilibrado, combinando legibilidade, estruturação de dados e bons resultados de tempo de resposta, o que o torna altamente recomendável para sistemas que priorizam facilidade de manutenção, integração e interoperabilidade entre serviços. Já o protocolo Strings, embora funcional e de fácil interpretação humana, mostrou-se menos robusto e mais suscetível a erros de formatação, além de apresentar menor eficiência na troca de dados, sendo mais adequado a implementações simples ou em fases iniciais de prototipagem.
 
-- **Strings** é simples e legível, ideal para depuração rápida e interoperabilidade mínima.
-- **JSON** equilibra legibilidade, organização de dados complexos e compatibilidade entre linguagens.
-- **Protobuf** oferece alta eficiência e performance, mas exige ferramentas para interpretação das mensagens, tornando-o mais adequado para aplicações de alto desempenho ou ambientes com grande volume de dados.
-
-A escolha do protocolo deve considerar fatores como **legibilidade**, **tamanho das mensagens**, **velocidade de processamento** e **complexidade da aplicação**.
+De forma geral, a experiência adquirida com este trabalho permitiu compreender a importância de escolher corretamente o protocolo de comunicação com base nas necessidades do sistema, considerando fatores como complexidade da aplicação, disponibilidade de recursos computacionais, requisitos de interoperabilidade e desempenho. A implementação dos clientes, aliada aos testes realizados, proporcionou uma visão prática sobre os impactos do formato de mensagem, da estruturação dos dados e dos mecanismos de serialização no funcionamento de aplicações distribuídas. Assim, recomenda-se o uso de Protobuf para ambientes críticos e de alto desempenho, JSON para soluções escaláveis e de fácil integração, e Strings apenas em cenários com baixo volume de dados e requisitos mínimos de estruturação.

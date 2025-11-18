@@ -64,8 +64,17 @@ def format_json_response(resposta, elapsed=None):
 # --------------------------
 def enviar_mensagem(sock, mensagem_obj):
     try:
+
+        t_inicio = time.time()
         texto = json.dumps(mensagem_obj) + '\n'
+        t_fim = time.time()
+        tempo_serializacao_ms = (t_fim - t_inicio) * 1000
+
+        print(f'Tamanho da mensagem JSON: {len(texto)} bytes')
+        print(f"Tempo de serialização JSON: {tempo_serializacao_ms:.2f} ms")
+
         sock.sendall(texto.encode('utf-8'))
+        
     except Exception as e:
         raise ErroRede(f"Erro ao enviar (json): {e}")
 

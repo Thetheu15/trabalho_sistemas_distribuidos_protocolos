@@ -1,0 +1,3 @@
+autenticar=OK|token=554229:200.17.37.126:1763472075:d25962a9c29e18f72d06b9fb8457271044ce344769ed5f9ccd548ff35047aaf6|nome=ANTONIO MATHEUS MONTEIRO DA SILVA|matricula=554229|timestamp=2025-11-18T13:21:15.689653|FIM
+status=OK|status=ATIVO|timestamp_consulta=2025-11-18T13:21:15.790609|operacoes_processadas=29|sessoes_ativas=1|tempo_ativo=1763472075.7906206|versao=1.0.0|metricas={'cpu_simulado': 53.76, 'memoria_simulada': 60.8, 'latencia_simulada': 9.55}|timestamp=2025-11-18T13:21:15.790039|FIM
+logout=OK|msg=Logout realizado com sucesso|timestamp=2025-11-18T13:21:15.885684|FIM
