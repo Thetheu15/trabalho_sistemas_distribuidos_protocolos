@@ -1,4 +1,4 @@
-# Relatório do trabalho sistemas distribuidos protocolos de comunicação
+# Relatório do trabalho de sistemas distribuidos protocolos de comunicação
 
 Para a execução correta do código, execute o arquivo denominado main.py e siga as instruções dadas por ele.
 
